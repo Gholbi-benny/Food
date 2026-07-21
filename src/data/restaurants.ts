@@ -1,0 +1,133 @@
+import type { Restaurant } from '../models/Restaurant';
+import chezTantineImg from '../assets/chez-tantine.jfif';
+import gourmetBrazzaImg from '../assets/gourmet-brazza.jfif';
+import quickBiteImg from '../assets/quick-bite.jfif';
+
+export const restaurants: Restaurant[] = [
+  {
+    id: '1',
+    name: 'Chez Tantine',
+    description: 'Cuisine congolaise traditionnelle dans une ambiance chaleureuse.',
+    logo: chezTantineImg,
+    photos: [],
+    address: 'Avenue de la Paix',
+    neighborhood: 'Bacongo',
+    phone: '+242 06 123 4567',
+    hours: '10h00 - 22h00',
+    category: 'Africain',
+    menu: [
+      {
+        id: '1-1',
+        name: 'Poulet braisé',
+        description: 'Poulet mariné et grillé, servi avec du foufou.',
+        price: 5000,
+        category: 'Plat principal',
+      },
+      {
+        id: '1-2',
+        name: 'Poisson salé aux feuilles de manioc',
+        description: 'Poisson salé mijoté avec des feuilles de manioc.',
+        price: 6000,
+        category: 'Plat principal',
+      },
+    ],
+  },
+  {
+    id: '2',
+    name: 'Le Gourmet Brazza',
+    description: 'Restaurant gastronomique avec vue sur le fleuve Congo.',
+    logo: gourmetBrazzaImg,
+    photos: [],
+    address: 'Corniche du Congo',
+    neighborhood: 'Centre-ville',
+    phone: '+242 05 987 6543',
+    hours: '11h00 - 23h00',
+    category: 'Gastronomique',
+    menu: [
+      {
+        id: '2-1',
+        name: 'Filet de capitaine grillé',
+        description: 'Poisson frais du fleuve, sauce citronnée.',
+        price: 8500,
+        category: 'Plat principal',
+      },
+    ],
+  },
+  {
+    id: '3',
+    name: 'Quick Bite Poto-Poto',
+    description: 'Fast-food local rapide et abordable.',
+    logo: quickBiteImg,
+    photos: [],
+    address: 'Rue des Martyrs',
+    neighborhood: 'Poto-Poto',
+    phone: '+242 06 555 1122',
+    hours: '09h00 - 21h00',
+    category: 'Fast-food',
+    menu: [
+      {
+        id: '3-1',
+        name: 'Brochettes de bœuf',
+        description: 'Brochettes grillées épicées, servies avec frites.',
+        price: 3000,
+        category: 'Snack',
+      },
+    ],
+  },
+  {
+    id: '4',
+    name: 'Mami Wata',
+    description: 'Restaurant incontournable au bord du fleuve Congo, avec une vue panoramique sur Kinshasa.',
+    logo: 'https://picsum.photos/seed/mamiwata/400/300',
+    photos: [],
+    address: 'Avenue de la Corniche',
+    neighborhood: 'Corniche / Centre-ville',
+    phone: '+242 05 534 28 79',
+    hours: '11h00 - 23h00',
+    category: 'Gastronomique',
+    menu: [
+      {
+        id: '4-1',
+        name: 'Formule midi',
+        description: 'Entrée + plat, ou plat + dessert.',
+        price: 14500,
+        category: 'Formule',
+      },
+      {
+        id: '4-2',
+        name: 'Capitaine grillé',
+        description: 'Poisson frais du fleuve Congo, à préciser — prix à vérifier.',
+        price: 0,
+        category: 'Plat principal',
+      },
+    ],
+  },
+  {
+    id: '5',
+    name: 'La Mandarine',
+    description: 'Institution brazzavilloise depuis 1993 : pâtisserie, café, glaces et spécialités libanaises.',
+    logo: 'https://picsum.photos/seed/lamandarine/400/300',
+    photos: [],
+    address: '3, Avenue Foch',
+    neighborhood: 'Centre-ville',
+    phone: '+242 06 666 6600',
+    hours: '06h30 - 23h00',
+    category: 'Libanais / Pâtisserie',
+    menu: [
+      {
+        id: '5-1',
+        name: 'Chawarma poulet',
+        description: 'Sandwich chawarma au poulet — prix à vérifier.',
+        price: 0,
+        category: 'Sandwich',
+      },
+      {
+        id: '5-2',
+        name: 'Pâtisserie du jour',
+        description: 'Viennoiserie ou pâtisserie maison — prix à vérifier.',
+        price: 0,
+        category: 'Dessert',
+      },
+    ],
+  },
+];
