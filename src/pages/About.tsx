@@ -3,14 +3,14 @@ function About() {
     <div className="px-6 py-16">
       <div className="max-w-3xl mx-auto text-white">
         <h1 className="text-4xl font-bold text-orange-500 mb-6">
-          À propos de Food
+          À propos d'Éssika
         </h1>
 
         <p className="text-gray-300 leading-relaxed mb-6">
-          <span className="text-orange-400 font-semibold">Food</span> est une
-          plateforme qui regroupe les restaurants de Brazzaville afin de
-          permettre aux utilisateurs de découvrir facilement les restaurants,
-          leurs menus, leurs prix et leurs nouveaux plats.
+          <span className="text-orange-400 font-semibold">Éssika</span> est
+          une plateforme qui regroupe les restaurants de Brazzaville afin de
+          permettre aux utilisateurs de découvrir facilement les
+          restaurants, leurs menus, leurs prix et leurs nouveaux plats.
         </p>
 
         <p className="text-gray-300 leading-relaxed mb-6">
@@ -30,7 +30,7 @@ function About() {
         </ul>
 
         <p className="text-gray-300 leading-relaxed">
-          Food est encore en construction — de nouvelles fonctionnalités
+          Éssika est encore en construction — de nouvelles fonctionnalités
           arrivent bientôt : avis, réservations, commandes en ligne et bien
           plus, pour devenir le guide numérique de la restauration
           congolaise.

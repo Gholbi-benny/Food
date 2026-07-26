@@ -26,7 +26,7 @@ function WhyFood() {
     <section className="px-6 py-16">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-10">
-          Pourquoi utiliser <span className="text-orange-500">Food</span> ?
+          Pourquoi utiliser <span className="text-orange-500">Éssika</span> ?
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

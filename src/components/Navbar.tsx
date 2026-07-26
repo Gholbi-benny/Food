@@ -5,7 +5,7 @@ function Navbar() {
     <nav className="bg-gray-950 border-b border-gray-800 px-6 py-4">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <Link to="/" className="text-2xl font-bold text-orange-500">
-          Food
+          Éssika
         </Link>
 
         <div className="flex gap-6 text-gray-300">
