@@ -12,4 +12,5 @@ export interface Restaurant {
   hours: string;
   category: string;
   menu: Food[];
+  verified?: boolean;
 }
