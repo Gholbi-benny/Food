@@ -20,9 +20,27 @@ function RestaurantCard({ restaurant }: RestaurantCardProps) {
       </div>
 
       <div className="p-4">
-        <h3 className="text-xl font-bold text-white">{restaurant.name}</h3>
+        <div className="flex items-center gap-2">
+          <h3 className="text-xl font-bold text-white">{restaurant.name}</h3>
+          {restaurant.verified && (
+            <span
+              title="Restaurant vérifié"
+              className="flex items-center justify-center w-4 h-4 bg-green-500 rounded-full flex-shrink-0"
+            >
+              <svg viewBox="0 0 24 24" fill="none" className="w-2.5 h-2.5">
+                <path
+                  d="M20 6L9 17l-5-5"
+                  stroke="white"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
+          )}
+        </div>
         <p className="text-sm text-orange-400">{restaurant.category}</p>
-       <p className="text-gray-400 text-sm mt-2 line-clamp-2 min-h-[2.5rem]">{restaurant.description}</p>
+        <p className="text-gray-400 text-sm mt-2 line-clamp-2 min-h-[2.5rem]">{restaurant.description}</p>
 
         <div className="mt-4 text-sm text-gray-300 space-y-1">
           <p>📍 {restaurant.neighborhood} — {restaurant.address}</p>

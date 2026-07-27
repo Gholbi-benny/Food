@@ -15,6 +15,7 @@ export const restaurants: Restaurant[] = [
     phone: '+242 06 123 4567',
     hours: '10h00 - 22h00',
     category: 'Africain',
+    verified: true,
     menu: [
       {
         id: '1-1',

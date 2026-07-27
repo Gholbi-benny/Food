@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const benefits = [
   'Plus de visibilité auprès des habitants et visiteurs de Brazzaville.',
   'Une présentation professionnelle de votre établissement.',
@@ -32,9 +34,9 @@ function WhyJoin() {
         </div>
 
         <div className="text-center mt-10">
-          <a href="mailto:contact@food.cg" className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full transition-colors">
+          <Link to="/dashboard/login" className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full transition-colors">
             Devenir restaurant partenaire
-          </a>
+          </Link>
         </div>
       </div>
     </section>

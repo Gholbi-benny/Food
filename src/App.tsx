@@ -6,7 +6,8 @@ import RestaurantDetails from './pages/RestaurantDetails';
 import About from './pages/About';
 import Restaurants from './pages/Restaurants';
 import Partners from './pages/Partners';
-
+import DashboardLogin from './pages/DashboardLogin';
+import DashboardHome from './pages/DashboardHome';
 function App() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-900">
@@ -19,6 +20,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/restaurants" element={<Restaurants />} />
           <Route path="/partners" element={<Partners />} />
+          <Route path="/dashboard/login" element={<DashboardLogin />} />
+          <Route path="/dashboard" element={<DashboardHome />} />
         </Routes>
       </main>
 
