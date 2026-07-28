@@ -8,6 +8,10 @@ import Restaurants from './pages/Restaurants';
 import Partners from './pages/Partners';
 import DashboardLogin from './pages/DashboardLogin';
 import DashboardHome from './pages/DashboardHome';
+import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
+import PartnerRules from './pages/PartnerRules';
+
 function App() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-900">
@@ -22,6 +26,9 @@ function App() {
           <Route path="/partners" element={<Partners />} />
           <Route path="/dashboard/login" element={<DashboardLogin />} />
           <Route path="/dashboard" element={<DashboardHome />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/partner-rules" element={<PartnerRules />} />
         </Routes>
       </main>
 
