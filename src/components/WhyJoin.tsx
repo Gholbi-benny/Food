@@ -14,7 +14,9 @@ function WhyJoin() {
     <section className="px-6 py-16 bg-gray-950">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-4">
-          Pourquoi rejoindre <span className="text-orange-500">Éssika</span> ?
+          Pourquoi rejoindre{' '}
+          <span className="text-orange-500">éssika</span>{' '}
+          <span className="text-white">eat</span> ?
         </h2>
         <p className="text-gray-400 text-center mb-10">
           Une opportunité pour les restaurants de Brazzaville de se faire

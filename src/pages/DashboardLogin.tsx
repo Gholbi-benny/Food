@@ -36,7 +36,7 @@ function DashboardLogin() {
           Espace restaurateur
         </h1>
         <p className="text-gray-400 text-center text-sm mb-8">
-          Connectez-vous pour gérer votre restaurant sur Éssika.
+          Connectez-vous pour gérer votre restaurant sur éssika eat.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-4">

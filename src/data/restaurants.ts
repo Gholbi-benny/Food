@@ -16,6 +16,7 @@ export const restaurants: Restaurant[] = [
     hours: '10h00 - 22h00',
     category: 'Africain',
     verified: true,
+    plan: 'plus',
     menu: [
       {
         id: '1-1',

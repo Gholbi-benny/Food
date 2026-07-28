@@ -15,9 +15,9 @@ function PartnerRules() {
               1. Devenir partenaire
             </h2>
             <p>
-              L'inscription d'un restaurant sur Éssika se fait après une
+              L'inscription d'un restaurant sur éssika eat se fait après une
               prise de contact directe entre l'établissement et l'équipe
-              Éssika. Aucun compte n'est créé sans échange préalable avec le
+              éssika eat. Aucun compte n'est créé sans échange préalable avec le
               restaurant.
             </p>
           </section>
@@ -30,7 +30,7 @@ function PartnerRules() {
               Le restaurant partenaire s'engage à fournir des informations
               exactes concernant son établissement : nom, adresse, horaires,
               contact, menu et prix. Il s'engage également à informer
-              Éssika de tout changement important (fermeture temporaire,
+              éssika eat de tout changement important (fermeture temporaire,
               changement de prix, déménagement, etc.).
             </p>
           </section>
@@ -41,7 +41,7 @@ function PartnerRules() {
             </h2>
             <p>
               Le badge « Restaurant vérifié » est attribué par l'équipe
-              Éssika après confirmation des informations fournies par
+              éssika eat après confirmation des informations fournies par
               l'établissement. Ce badge peut être retiré si les informations
               affichées s'avèrent inexactes ou obsolètes de manière répétée.
             </p>
@@ -67,7 +67,7 @@ function PartnerRules() {
               Les photos et descriptions fournies par le restaurant doivent
               représenter fidèlement l'établissement et ses plats. Le
               restaurant garantit disposer des droits nécessaires sur les
-              images transmises à Éssika.
+              images transmises à éssika eat.
             </p>
           </section>
 
@@ -77,7 +77,7 @@ function PartnerRules() {
             </h2>
             <p>
               Un restaurant peut demander à tout moment le retrait de sa
-              fiche de la plateforme. Éssika se réserve également le droit
+              fiche de la plateforme. éssika eat se réserve également le droit
               de suspendre ou retirer une fiche en cas de non-respect des
               présentes règles, ou de fermeture définitive constatée de
               l'établissement.
@@ -89,7 +89,7 @@ function PartnerRules() {
               7. Évolution des formules
             </h2>
             <p>
-              Éssika propose actuellement un accès gratuit aux restaurants
+              éssika eat propose actuellement un accès gratuit aux restaurants
               partenaires. Des formules complémentaires avec des
               fonctionnalités additionnelles pourront être proposées à
               l'avenir, sans obligation d'y souscrire.

@@ -13,4 +13,5 @@ export interface Restaurant {
   category: string;
   menu: Food[];
   verified?: boolean;
+  plan?: 'free' | 'plus' | 'pro';
 }

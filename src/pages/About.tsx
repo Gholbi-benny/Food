@@ -2,12 +2,14 @@ function About() {
   return (
     <div className="px-6 py-16">
       <div className="max-w-3xl mx-auto text-white">
-        <h1 className="text-4xl font-bold text-orange-500 mb-6">
-          À propos d'Éssika
+        <h1 className="text-4xl font-bold mb-6">
+          À propos d'<span className="text-orange-500">éssika</span>{' '}
+          <span className="text-white">eat</span>
         </h1>
 
         <p className="text-gray-300 leading-relaxed mb-6">
-          <span className="text-orange-400 font-semibold">Éssika</span> est
+          <span className="text-orange-400 font-semibold">éssika</span>{' '}
+          <span className="text-white font-semibold">eat</span> est
           une plateforme qui regroupe les restaurants de Brazzaville afin de
           permettre aux utilisateurs de découvrir facilement les
           restaurants, leurs menus, leurs prix et leurs nouveaux plats.
@@ -30,7 +32,8 @@ function About() {
         </ul>
 
         <p className="text-gray-300 leading-relaxed">
-          Éssika est encore en construction — de nouvelles fonctionnalités
+          <span className="text-orange-400">éssika</span>{' '}
+          <span className="text-white">eat</span> est encore en construction — de nouvelles fonctionnalités
           arrivent bientôt : avis, réservations, commandes en ligne et bien
           plus, pour devenir le guide numérique de la restauration
           congolaise.

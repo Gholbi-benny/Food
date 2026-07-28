@@ -15,7 +15,7 @@ function Terms() {
               1. Objet
             </h2>
             <p>
-              Éssika est une plateforme numérique qui permet aux
+              éssika eat est une plateforme numérique qui permet aux
               utilisateurs de découvrir les restaurants de Brazzaville,
               leurs menus, leurs prix et leurs informations. Les présentes
               conditions générales d'utilisation (« CGU ») régissent l'accès
@@ -29,11 +29,11 @@ function Terms() {
               2. Accès à la plateforme
             </h2>
             <p>
-              L'accès à Éssika est libre et gratuit pour les visiteurs
+              L'accès à éssika eat est libre et gratuit pour les visiteurs
               souhaitant consulter les restaurants référencés. Certaines
               fonctionnalités, notamment l'espace de gestion réservé aux
               restaurateurs, nécessitent un accès accordé par l'équipe
-              Éssika.
+              éssika eat.
             </p>
           </section>
 
@@ -44,7 +44,7 @@ function Terms() {
             <p>
               Les informations relatives aux restaurants (noms, adresses,
               menus, prix, horaires, photos) sont fournies à titre indicatif.
-              Éssika s'efforce de maintenir ces informations à jour, en
+              éssika eat s'efforce de maintenir ces informations à jour, en
               collaboration avec les établissements partenaires, mais ne
               peut garantir leur exactitude absolue à tout moment. Il est
               recommandé de vérifier directement auprès du restaurant en cas
@@ -57,11 +57,11 @@ function Terms() {
               4. Responsabilité
             </h2>
             <p>
-              Éssika agit en tant qu'intermédiaire d'information entre les
+              éssika eat agit en tant qu'intermédiaire d'information entre les
               restaurants et les utilisateurs. La plateforme ne prend pas en
               charge les réservations, commandes ou paiements directs avec
               les établissements référencés, sauf mention contraire
-              explicite. Éssika ne saurait être tenue responsable des
+              explicite. éssika eat ne saurait être tenue responsable des
               litiges éventuels entre un utilisateur et un restaurant.
             </p>
           </section>
@@ -71,7 +71,7 @@ function Terms() {
               5. Propriété intellectuelle
             </h2>
             <p>
-              L'ensemble des éléments composant la plateforme Éssika (logo,
+              L'ensemble des éléments composant la plateforme éssika eat (logo,
               charte graphique, code, structure) est protégé et ne peut être
               reproduit sans autorisation préalable.
             </p>
@@ -82,7 +82,7 @@ function Terms() {
               6. Modification des CGU
             </h2>
             <p>
-              Éssika se réserve le droit de modifier les présentes
+              éssika eat se réserve le droit de modifier les présentes
               conditions à tout moment, notamment pour accompagner
               l'évolution de la plateforme. Les utilisateurs seront informés
               des changements significatifs.

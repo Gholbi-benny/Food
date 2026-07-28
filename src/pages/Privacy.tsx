@@ -15,7 +15,7 @@ function Privacy() {
               1. Données collectées
             </h2>
             <p>
-              Éssika collecte uniquement les données nécessaires au bon
+              éssika eat collecte uniquement les données nécessaires au bon
               fonctionnement de la plateforme :
             </p>
             <ul className="list-disc list-inside mt-2 space-y-1">
@@ -50,7 +50,7 @@ function Privacy() {
               </li>
             </ul>
             <p className="mt-2">
-              Éssika ne vend ni ne partage ces données avec des tiers à des
+              éssika eat ne vend ni ne partage ces données avec des tiers à des
               fins commerciales.
             </p>
           </section>
@@ -63,7 +63,7 @@ function Privacy() {
               Les données sont hébergées via des services tiers sécurisés
               (Supabase). Les mots de passe sont stockés de manière chiffrée
               et ne sont jamais accessibles en clair, y compris par
-              l'équipe Éssika.
+              l'équipe éssika eat.
             </p>
           </section>
 
@@ -75,7 +75,7 @@ function Privacy() {
               Les données d'un restaurant partenaire sont conservées tant
               que le partenariat est actif. Un restaurant peut demander la
               suppression de ses données à tout moment en contactant
-              l'équipe Éssika.
+              l'équipe éssika eat.
             </p>
           </section>
 
@@ -86,7 +86,7 @@ function Privacy() {
             <p>
               Tout restaurant partenaire peut demander à consulter,
               corriger ou supprimer les données le concernant en contactant
-              l'équipe Éssika via la page{' '}
+              l'équipe éssika eat via la page{' '}
               <a href="/about" className="text-orange-400 hover:underline">
                 À propos
               </a>
@@ -99,7 +99,7 @@ function Privacy() {
               6. Cookies
             </h2>
             <p>
-              La plateforme Éssika n'utilise pas, à ce jour, de cookies de
+              La plateforme éssika eat n'utilise pas, à ce jour, de cookies de
               suivi publicitaire. Des cookies techniques strictement
               nécessaires au fonctionnement du site peuvent être utilisés.
             </p>
