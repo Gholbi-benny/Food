@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 function Hero() {
   return (
     <section className="relative min-h-screen flex items-center px-6 py-20 text-center overflow-hidden bg-white dark:bg-gray-900">
-      <div className="absolute inset-0 bg-gradient-to-b from-orange-500/10 via-white dark:via-gray-900 to-white dark:to-gray-900" />
+      <div className="absolute inset-0 bg-linear-to-b from-orange-500/10 via-white dark:via-gray-900 to-white dark:to-gray-900" />
 
       <div className="relative max-w-3xl mx-auto">
         <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight">

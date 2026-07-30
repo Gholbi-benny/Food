@@ -41,7 +41,7 @@ function FeaturedCarousel({ restaurants }: FeaturedCarouselProps) {
             alt={current.name}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/15 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-4">
             <h3 className="text-white text-base font-bold">{current.name}</h3>
             <p className="text-gray-300 text-xs">{current.category}</p>

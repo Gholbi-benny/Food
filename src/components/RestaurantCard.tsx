@@ -25,7 +25,7 @@ function RestaurantCard({ restaurant }: RestaurantCardProps) {
           {restaurant.verified && (
             <span
               title="Restaurant vérifié"
-              className="flex items-center justify-center w-4 h-4 bg-green-500 rounded-full flex-shrink-0"
+              className="flex items-center justify-center w-4 h-4 bg-green-500 rounded-full shrink-0"
             >
               <svg viewBox="0 0 24 24" fill="none" className="w-2.5 h-2.5">
                 <path

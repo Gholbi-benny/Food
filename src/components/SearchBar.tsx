@@ -47,7 +47,7 @@ function SearchBar({ value, onChange, restaurants }: SearchBarProps) {
             >
               <span className="text-gray-900 dark:text-white text-sm">{restaurant.name}</span>
               {restaurant.verified && (
-                <span className="flex items-center justify-center w-3.5 h-3.5 bg-green-500 rounded-full flex-shrink-0">
+                <span className="flex items-center justify-center w-3.5 h-3.5 bg-green-500 rounded-full shrink-0">
                   <svg viewBox="0 0 24 24" fill="none" className="w-2 h-2">
                     <path
                       d="M20 6L9 17l-5-5"
