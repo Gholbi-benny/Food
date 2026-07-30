@@ -26,7 +26,7 @@ function RestaurantDetails() {
             {restaurant.verified && (
               <span
                 title="Restaurant vérifié"
-                className="flex items-center justify-center w-5 h-5 bg-green-500 rounded-full flex-shrink-0"
+                className="flex items-center justify-center w-5 h-5 bg-green-500 rounded-full shrink-0"
               >
                 <svg viewBox="0 0 24 24" fill="none" className="w-3 h-3">
                   <path
@@ -45,7 +45,7 @@ function RestaurantDetails() {
 
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div className="flex items-start gap-3 bg-gray-100 dark:bg-gray-800 rounded-xl p-3">
-              <span className="flex items-center justify-center w-9 h-9 bg-orange-500/10 rounded-full text-lg flex-shrink-0">
+              <span className="flex items-center justify-center w-9 h-9 bg-orange-500/10 rounded-full text-lg shrink-0">
                 📍
               </span>
               <div className="min-w-0">
@@ -57,7 +57,7 @@ function RestaurantDetails() {
             </div>
 
             <div className="flex items-start gap-3 bg-gray-100 dark:bg-gray-800 rounded-xl p-3">
-              <span className="flex items-center justify-center w-9 h-9 bg-orange-500/10 rounded-full text-lg flex-shrink-0">
+              <span className="flex items-center justify-center w-9 h-9 bg-orange-500/10 rounded-full text-lg shrink-0">
                 🕒
               </span>
               <div className="min-w-0">
@@ -71,7 +71,7 @@ function RestaurantDetails() {
             </div>
 
             <div className="flex items-start gap-3 bg-gray-100 dark:bg-gray-800 rounded-xl p-3">
-              <span className="flex items-center justify-center w-9 h-9 bg-orange-500/10 rounded-full text-lg flex-shrink-0">
+              <span className="flex items-center justify-center w-9 h-9 bg-orange-500/10 rounded-full text-lg shrink-0">
                 📞
               </span>
               <div className="min-w-0">
