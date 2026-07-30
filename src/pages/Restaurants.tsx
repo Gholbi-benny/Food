@@ -33,14 +33,14 @@ function Restaurants() {
       <FeaturedCarousel restaurants={restaurants} />
 
       <section className="px-6 py-16">
-        <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-6">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white text-center mb-6">
           Nos restaurants
         </h2>
 
         <SearchBar value={query} onChange={setQuery} restaurants={restaurants} />
 
         {filteredRestaurants.length === 0 ? (
-          <p className="text-center text-gray-500">
+          <p className="text-center text-gray-500 dark:text-gray-500">
             Aucun restaurant ne correspond à ta recherche.
           </p>
         ) : (

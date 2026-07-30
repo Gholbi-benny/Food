@@ -11,14 +11,14 @@ const benefits = [
 
 function WhyJoin() {
   return (
-    <section className="px-6 py-16 bg-gray-950">
+    <section className="px-6 py-16 bg-gray-50 dark:bg-gray-950">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-4">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white text-center mb-4">
           Pourquoi rejoindre{' '}
           <span className="text-orange-500">éssika</span>{' '}
-          <span className="text-white">eat</span> ?
+          <span className="text-gray-900 dark:text-white">eat</span> ?
         </h2>
-        <p className="text-gray-400 text-center mb-10">
+        <p className="text-gray-600 dark:text-gray-400 text-center mb-10">
           Une opportunité pour les restaurants de Brazzaville de se faire
           connaître.
         </p>
@@ -27,10 +27,10 @@ function WhyJoin() {
           {benefits.map((benefit) => (
             <div
               key={benefit}
-              className="flex items-start gap-3 bg-gray-800 rounded-lg p-4"
+              className="flex items-start gap-3 bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm dark:shadow-none border border-gray-100 dark:border-transparent"
             >
               <span className="text-orange-500 text-xl leading-none">✓</span>
-              <p className="text-gray-200 text-sm">{benefit}</p>
+              <p className="text-gray-700 dark:text-gray-200 text-sm">{benefit}</p>
             </div>
           ))}
         </div>

@@ -28,7 +28,7 @@ function FeaturedCarousel({ restaurants }: FeaturedCarouselProps) {
   return (
     <section className="px-6 pb-12">
       <div className="max-w-2xl mx-auto">
-        <p className="text-center text-gray-500 text-xs uppercase tracking-wide mb-3">
+        <p className="text-center text-gray-500 dark:text-gray-500 text-xs uppercase tracking-wide mb-3">
           À la une
         </p>
 
@@ -55,7 +55,7 @@ function FeaturedCarousel({ restaurants }: FeaturedCarouselProps) {
                 key={r.id}
                 onClick={() => setIndex(i)}
                 className={`h-1.5 rounded-full transition-all ${
-                  i === index ? 'w-4 bg-orange-500' : 'w-1.5 bg-gray-700'
+                  i === index ? 'w-4 bg-orange-500' : 'w-1.5 bg-gray-300 dark:bg-gray-700'
                 }`}
               />
             ))}

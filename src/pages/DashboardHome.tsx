@@ -66,7 +66,7 @@ function DashboardHome() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center text-white">
+      <div className="min-h-screen flex items-center justify-center text-gray-900 dark:text-white">
         Chargement...
       </div>
     );
@@ -74,7 +74,7 @@ function DashboardHome() {
 
   if (!restaurant) {
     return (
-      <div className="min-h-screen flex items-center justify-center text-white">
+      <div className="min-h-screen flex items-center justify-center text-gray-900 dark:text-white">
         Aucun restaurant associé à ce compte.
       </div>
     );
@@ -85,28 +85,28 @@ function DashboardHome() {
       <div className="max-w-4xl mx-auto">
         <header className="mb-8 flex justify-between items-start">
           <div>
-            <h1 className="text-3xl font-bold text-white">
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
               Bonjour, {restaurant.name} 👋
             </h1>
-            <p className="text-gray-400 mt-1">
+            <p className="text-gray-600 dark:text-gray-400 mt-1">
               Gérez votre présence sur Éssika depuis cet espace.
             </p>
           </div>
           <button
             onClick={handleLogout}
-            className="text-gray-400 hover:text-white text-sm border border-gray-700 hover:border-gray-500 px-4 py-2 rounded-lg transition-colors"
+            className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-sm border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500 px-4 py-2 rounded-lg transition-colors"
           >
             Se déconnecter
           </button>
         </header>
 
-        <div className="flex gap-2 border-b border-gray-800 mb-8">
+        <div className="flex gap-2 border-b border-gray-200 dark:border-gray-800 mb-8">
           <button
             onClick={() => setActiveTab('infos')}
             className={`px-4 py-2 font-medium transition-colors ${
               activeTab === 'infos'
                 ? 'text-orange-500 border-b-2 border-orange-500'
-                : 'text-gray-400 hover:text-gray-200'
+                : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
             }`}
           >
             Informations
@@ -116,7 +116,7 @@ function DashboardHome() {
             className={`px-4 py-2 font-medium transition-colors ${
               activeTab === 'menu'
                 ? 'text-orange-500 border-b-2 border-orange-500'
-                : 'text-gray-400 hover:text-gray-200'
+                : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
             }`}
           >
             Menu
@@ -126,7 +126,7 @@ function DashboardHome() {
             className={`px-4 py-2 font-medium transition-colors ${
               activeTab === 'stats'
                 ? 'text-orange-500 border-b-2 border-orange-500'
-                : 'text-gray-400 hover:text-gray-200'
+                : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
             }`}
           >
             Statistiques
@@ -134,47 +134,47 @@ function DashboardHome() {
         </div>
 
         {activeTab === 'infos' && (
-          <div className="bg-gray-800 rounded-xl p-6 space-y-4">
+          <div className="bg-gray-100 dark:bg-gray-800 rounded-xl p-6 space-y-4">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-xl font-semibold text-white">
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
                 Informations du restaurant
               </h2>
               {restaurant.verified ? (
-                <span className="bg-green-500/20 text-green-400 text-xs font-semibold px-3 py-1 rounded-full">
+                <span className="bg-green-500/20 text-green-600 dark:text-green-400 text-xs font-semibold px-3 py-1 rounded-full">
                   ✓ Restaurant vérifié
                 </span>
               ) : (
-                <span className="bg-gray-700 text-gray-400 text-xs font-semibold px-3 py-1 rounded-full">
+                <span className="bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs font-semibold px-3 py-1 rounded-full">
                   En attente de vérification
                 </span>
               )}
             </div>
             <div>
-              <label className="text-sm text-gray-400 block mb-1">Nom</label>
+              <label className="text-sm text-gray-600 dark:text-gray-400 block mb-1">Nom</label>
               <input
                 type="text"
                 defaultValue={restaurant.name}
-                className="w-full bg-gray-900 text-white rounded-lg px-4 py-2 outline-none focus:ring-2 focus:ring-orange-500"
+                className="w-full bg-white dark:bg-gray-900 text-gray-900 dark:text-white border border-gray-300 dark:border-transparent rounded-lg px-4 py-2 outline-none focus:ring-2 focus:ring-orange-500"
               />
             </div>
             <div>
-              <label className="text-sm text-gray-400 block mb-1">
+              <label className="text-sm text-gray-600 dark:text-gray-400 block mb-1">
                 Adresse
               </label>
               <input
                 type="text"
                 defaultValue={`${restaurant.address}, ${restaurant.neighborhood}`}
-                className="w-full bg-gray-900 text-white rounded-lg px-4 py-2 outline-none focus:ring-2 focus:ring-orange-500"
+                className="w-full bg-white dark:bg-gray-900 text-gray-900 dark:text-white border border-gray-300 dark:border-transparent rounded-lg px-4 py-2 outline-none focus:ring-2 focus:ring-orange-500"
               />
             </div>
             <div>
-              <label className="text-sm text-gray-400 block mb-1">
+              <label className="text-sm text-gray-600 dark:text-gray-400 block mb-1">
                 Téléphone
               </label>
               <input
                 type="text"
                 defaultValue={restaurant.phone}
-                className="w-full bg-gray-900 text-white rounded-lg px-4 py-2 outline-none focus:ring-2 focus:ring-orange-500"
+                className="w-full bg-white dark:bg-gray-900 text-gray-900 dark:text-white border border-gray-300 dark:border-transparent rounded-lg px-4 py-2 outline-none focus:ring-2 focus:ring-orange-500"
               />
             </div>
             <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded-lg transition-colors">
@@ -184,9 +184,9 @@ function DashboardHome() {
         )}
 
         {activeTab === 'menu' && (
-          <div className="bg-gray-800 rounded-xl p-6">
+          <div className="bg-gray-100 dark:bg-gray-800 rounded-xl p-6">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-xl font-semibold text-white">
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
                 Votre menu
               </h2>
               <button className="bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors">
@@ -203,11 +203,11 @@ function DashboardHome() {
                 {dishes.map((dish) => (
                   <div
                     key={dish.id}
-                    className="bg-gray-900 rounded-lg p-4 flex justify-between items-center"
+                    className="bg-white dark:bg-gray-900 rounded-lg p-4 flex justify-between items-center border border-gray-200 dark:border-transparent"
                   >
                     <div>
-                      <p className="text-white font-medium">{dish.name}</p>
-                      <p className="text-gray-400 text-sm">
+                      <p className="text-gray-900 dark:text-white font-medium">{dish.name}</p>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">
                         {dish.description}
                       </p>
                     </div>
@@ -222,26 +222,26 @@ function DashboardHome() {
         )}
 
         {activeTab === 'stats' && (
-          <div className="bg-gray-800 rounded-xl p-6">
-            <h2 className="text-xl font-semibold text-white mb-6">
+          <div className="bg-gray-100 dark:bg-gray-800 rounded-xl p-6">
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
               Ce mois-ci
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="bg-gray-900 rounded-lg p-4 text-center">
+              <div className="bg-white dark:bg-gray-900 rounded-lg p-4 text-center border border-gray-200 dark:border-transparent">
                 <p className="text-3xl font-bold text-orange-500">0</p>
-                <p className="text-gray-400 text-sm mt-1">
+                <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">
                   Personnes ont découvert votre restaurant
                 </p>
               </div>
-              <div className="bg-gray-900 rounded-lg p-4 text-center">
+              <div className="bg-white dark:bg-gray-900 rounded-lg p-4 text-center border border-gray-200 dark:border-transparent">
                 <p className="text-3xl font-bold text-orange-500">0</p>
-                <p className="text-gray-400 text-sm mt-1">
+                <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">
                   Personnes ont consulté votre menu
                 </p>
               </div>
-              <div className="bg-gray-900 rounded-lg p-4 text-center">
+              <div className="bg-white dark:bg-gray-900 rounded-lg p-4 text-center border border-gray-200 dark:border-transparent">
                 <p className="text-3xl font-bold text-orange-500">0</p>
-                <p className="text-gray-400 text-sm mt-1">
+                <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">
                   Personnes vous ont contacté
                 </p>
               </div>

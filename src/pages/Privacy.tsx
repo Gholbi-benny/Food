@@ -1,7 +1,7 @@
 function Privacy() {
   return (
     <div className="px-6 py-16">
-      <div className="max-w-3xl mx-auto text-white">
+      <div className="max-w-3xl mx-auto text-gray-900 dark:text-white">
         <h1 className="text-4xl font-bold text-orange-500 mb-2">
           Politique de Confidentialité
         </h1>
@@ -9,9 +9,9 @@ function Privacy() {
           Dernière mise à jour : juillet 2026
         </p>
 
-        <div className="space-y-8 text-gray-300 leading-relaxed">
+        <div className="space-y-8 text-gray-700 dark:text-gray-300 leading-relaxed">
           <section>
-            <h2 className="text-xl font-semibold text-white mb-2">
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
               1. Données collectées
             </h2>
             <p>
@@ -33,7 +33,7 @@ function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-white mb-2">
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
               2. Utilisation des données
             </h2>
             <p>
@@ -56,7 +56,7 @@ function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-white mb-2">
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
               3. Stockage et sécurité
             </h2>
             <p>
@@ -68,7 +68,7 @@ function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-white mb-2">
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
               4. Durée de conservation
             </h2>
             <p>
@@ -80,7 +80,7 @@ function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-white mb-2">
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
               5. Droits des utilisateurs
             </h2>
             <p>
@@ -95,7 +95,7 @@ function Privacy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-white mb-2">
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
               6. Cookies
             </h2>
             <p>

@@ -1,21 +1,25 @@
 import { Link } from 'react-router-dom';
-import logo from '../assets/logo.png';
+import logoLight from '../assets/logo-light.png';
+import logoDark from '../assets/logo.png';
+import ThemeToggle from './ThemeToggle';
 
 function Navbar() {
   return (
-    <nav className="bg-gray-950 border-b border-gray-800 px-6 py-4">
+    <nav className="bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800 px-6 py-4">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <Link to="/">
-          <img src={logo} alt="éssika eat" className="h-9 w-auto" />
+          <img src={logoLight} alt="éssika eat" className="h-9 w-auto dark:hidden" />
+          <img src={logoDark} alt="éssika eat" className="h-9 w-auto hidden dark:block" />
         </Link>
 
-        <div className="flex gap-6 text-gray-300">
+        <div className="flex items-center gap-6 text-gray-600 dark:text-gray-300">
           <Link to="/restaurants" className="hover:text-orange-400 transition-colors">
             Accueil
           </Link>
           <Link to="/about" className="hover:text-orange-400 transition-colors">
             À propos
           </Link>
+          <ThemeToggle />
         </div>
       </div>
     </nav>

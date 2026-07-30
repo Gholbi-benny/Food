@@ -31,21 +31,21 @@ function SearchBar({ value, onChange, restaurants }: SearchBarProps) {
         onFocus={() => setIsOpen(true)}
         onBlur={() => setTimeout(() => setIsOpen(false), 150)}
         placeholder="Rechercher un restaurant, un quartier, une cuisine..."
-        className="w-full bg-gray-800 text-white placeholder-gray-500 rounded-full px-6 py-3 outline-none focus:ring-2 focus:ring-orange-500 transition-shadow"
+        className="w-full bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-500 rounded-full px-6 py-3 outline-none focus:ring-2 focus:ring-orange-500 transition-shadow"
       />
 
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-gray-800 border border-gray-700 rounded-2xl shadow-xl overflow-hidden z-10">
-          <p className="text-xs text-gray-500 px-4 pt-3 pb-1">
+        <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-xl overflow-hidden z-10">
+          <p className="text-xs text-gray-500 dark:text-gray-500 px-4 pt-3 pb-1">
             Restaurants recommandés
           </p>
           {suggestions.map((restaurant) => (
             <button
               key={restaurant.id}
               onClick={() => navigate(`/restaurant/${restaurant.id}`)}
-              className="w-full flex items-center gap-2 px-4 py-2.5 text-left hover:bg-gray-700 transition-colors"
+              className="w-full flex items-center gap-2 px-4 py-2.5 text-left hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
             >
-              <span className="text-white text-sm">{restaurant.name}</span>
+              <span className="text-gray-900 dark:text-white text-sm">{restaurant.name}</span>
               {restaurant.verified && (
                 <span className="flex items-center justify-center w-3.5 h-3.5 bg-green-500 rounded-full flex-shrink-0">
                   <svg viewBox="0 0 24 24" fill="none" className="w-2 h-2">
