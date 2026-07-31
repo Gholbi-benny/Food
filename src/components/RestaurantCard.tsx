@@ -7,7 +7,7 @@ interface RestaurantCardProps {
 function RestaurantCard({ restaurant }: RestaurantCardProps) {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-transparent hover:shadow-orange-500/20 transition-shadow">
-      <div className="h-40 bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-500">
+      <div className="h-36 sm:h-40 bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-500">
         {restaurant.logo ? (
           <img
             src={restaurant.logo}
@@ -19,9 +19,9 @@ function RestaurantCard({ restaurant }: RestaurantCardProps) {
         )}
       </div>
 
-      <div className="p-4">
+      <div className="p-3 sm:p-4">
         <div className="flex items-center gap-2">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white">{restaurant.name}</h3>
+          <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">{restaurant.name}</h3>
           {restaurant.verified && (
             <span
               title="Restaurant vérifié"
@@ -40,9 +40,9 @@ function RestaurantCard({ restaurant }: RestaurantCardProps) {
           )}
         </div>
         <p className="text-sm text-orange-400">{restaurant.category}</p>
-        <p className="text-gray-600 dark:text-gray-400 text-sm mt-2 line-clamp-2 min-h-[2.5rem]">{restaurant.description}</p>
+        <p className="text-gray-600 dark:text-gray-400 text-sm mt-2 line-clamp-2 min-h-10">{restaurant.description}</p>
 
-        <div className="mt-4 text-sm text-gray-700 dark:text-gray-300 space-y-1">
+        <div className="mt-4 text-xs sm:text-sm text-gray-700 dark:text-gray-300 space-y-1">
           <p>📍 {restaurant.neighborhood} — {restaurant.address}</p>
           <p>🕒 {restaurant.hours}</p>
           <p>📞 {restaurant.phone}</p>

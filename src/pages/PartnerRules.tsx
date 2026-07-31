@@ -1,17 +1,17 @@
 function PartnerRules() {
   return (
-    <div className="px-6 py-16">
+    <div className="px-4 sm:px-6 py-12 sm:py-16">
       <div className="max-w-3xl mx-auto text-gray-900 dark:text-white">
-        <h1 className="text-4xl font-bold text-orange-500 mb-2">
+        <h1 className="text-2xl sm:text-4xl font-bold text-orange-500 mb-2">
           Règles pour les restaurants partenaires
         </h1>
-        <p className="text-gray-500 text-sm mb-10">
+        <p className="text-gray-500 text-xs sm:text-sm mb-8 sm:mb-10">
           Dernière mise à jour : juillet 2026
         </p>
 
-        <div className="space-y-8 text-gray-700 dark:text-gray-300 leading-relaxed">
+        <div className="space-y-6 sm:space-y-8 text-gray-700 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2">
               1. Devenir partenaire
             </h2>
             <p>
@@ -23,7 +23,7 @@ function PartnerRules() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2">
               2. Exactitude des informations
             </h2>
             <p>
@@ -36,7 +36,7 @@ function PartnerRules() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2">
               3. Badge « Restaurant vérifié »
             </h2>
             <p>
@@ -48,7 +48,7 @@ function PartnerRules() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2">
               4. Utilisation de l'espace restaurateur
             </h2>
             <p>
@@ -60,7 +60,7 @@ function PartnerRules() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2">
               5. Contenu et photos
             </h2>
             <p>
@@ -72,7 +72,7 @@ function PartnerRules() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2">
               6. Fin de partenariat
             </h2>
             <p>
@@ -85,7 +85,7 @@ function PartnerRules() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2">
               7. Évolution des formules
             </h2>
             <p>

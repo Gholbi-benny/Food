@@ -32,19 +32,19 @@ function Restaurants() {
 
       <FeaturedCarousel restaurants={restaurants} />
 
-      <section className="px-6 py-16">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white text-center mb-6">
+      <section className="px-4 sm:px-6 py-12 sm:py-16">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 dark:text-white text-center mb-6">
           Nos restaurants
         </h2>
 
         <SearchBar value={query} onChange={setQuery} restaurants={restaurants} />
 
         {filteredRestaurants.length === 0 ? (
-          <p className="text-center text-gray-500 dark:text-gray-500">
+          <p className="text-center text-gray-500 dark:text-gray-500 text-sm sm:text-base">
             Aucun restaurant ne correspond à ta recherche.
           </p>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
             {filteredRestaurants.map((restaurant) => (
               <Link key={restaurant.id} to={`/restaurant/${restaurant.id}`}>
                 <RestaurantCard restaurant={restaurant} />

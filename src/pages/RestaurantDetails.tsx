@@ -14,15 +14,15 @@ function RestaurantDetails() {
   }
 
   return (
-    <div className="px-6 py-10 text-gray-900 dark:text-white">
+    <div className="px-4 sm:px-6 py-8 sm:py-10 text-gray-900 dark:text-white">
       <div className="max-w-3xl mx-auto">
-        <Link to="/restaurants" className="text-orange-400 hover:underline">
+        <Link to="/restaurants" className="text-orange-400 hover:underline text-sm sm:text-base">
           ← Retour aux restaurants
         </Link>
 
-        <div className="mt-6">
+        <div className="mt-4 sm:mt-6">
           <div className="flex items-center gap-2">
-            <h1 className="text-3xl font-bold">{restaurant.name}</h1>
+            <h1 className="text-2xl sm:text-3xl font-bold">{restaurant.name}</h1>
             {restaurant.verified && (
               <span
                 title="Restaurant vérifié"
@@ -40,10 +40,10 @@ function RestaurantDetails() {
               </span>
             )}
           </div>
-          <p className="text-orange-400">{restaurant.category}</p>
-          <p className="text-gray-600 dark:text-gray-400 mt-2">{restaurant.description}</p>
+          <p className="text-orange-400 text-sm sm:text-base">{restaurant.category}</p>
+          <p className="text-gray-600 dark:text-gray-400 mt-2 text-sm sm:text-base">{restaurant.description}</p>
 
-          <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div className="mt-5 sm:mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div className="flex items-start gap-3 bg-gray-100 dark:bg-gray-800 rounded-xl p-3">
               <span className="flex items-center justify-center w-9 h-9 bg-orange-500/10 rounded-full text-lg shrink-0">
                 📍
@@ -85,14 +85,14 @@ function RestaurantDetails() {
             </div>
           </div>
 
-          <h2 className="text-2xl font-bold mt-8 mb-4">Menu</h2>
+          <h2 className="text-xl sm:text-2xl font-bold mt-6 sm:mt-8 mb-3 sm:mb-4">Menu</h2>
           <div className="space-y-3">
             {restaurant.menu.map((food) => (
               <div
                 key={food.id}
-                className="bg-gray-100 dark:bg-gray-800 rounded-xl p-5 flex justify-between items-center hover:bg-gray-200 dark:hover:bg-gray-800/80 hover:border-orange-500/30 border border-transparent transition-colors"
+                className="bg-gray-100 dark:bg-gray-800 rounded-xl p-4 sm:p-5 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-0 hover:bg-gray-200 dark:hover:bg-gray-800/80 hover:border-orange-500/30 border border-transparent transition-colors"
               >
-                <div className="flex-1 pr-4">
+                <div className="flex-1 sm:pr-4">
                   {food.category && (
                     <span className="inline-block text-xs text-orange-400 bg-orange-500/10 px-2 py-0.5 rounded-full mb-1.5">
                       {food.category}
@@ -103,7 +103,7 @@ function RestaurantDetails() {
                     {food.description}
                   </p>
                 </div>
-                <span className="bg-orange-500/10 text-orange-400 font-bold whitespace-nowrap px-3 py-1.5 rounded-lg">
+                <span className="self-start sm:self-auto bg-orange-500/10 text-orange-400 font-bold whitespace-nowrap px-3 py-1.5 rounded-lg">
                   {food.price.toLocaleString()} FCFA
                 </span>
               </div>

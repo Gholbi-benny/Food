@@ -1,17 +1,17 @@
 function Terms() {
   return (
-    <div className="px-6 py-16">
+    <div className="px-4 sm:px-6 py-12 sm:py-16">
       <div className="max-w-3xl mx-auto text-gray-900 dark:text-white">
-        <h1 className="text-4xl font-bold text-orange-500 mb-2">
+        <h1 className="text-2xl sm:text-4xl font-bold text-orange-500 mb-2">
           Conditions Générales d'Utilisation
         </h1>
-        <p className="text-gray-500 text-sm mb-10">
+        <p className="text-gray-500 text-xs sm:text-sm mb-8 sm:mb-10">
           Dernière mise à jour : juillet 2026
         </p>
 
-        <div className="space-y-8 text-gray-700 dark:text-gray-300 leading-relaxed">
+        <div className="space-y-6 sm:space-y-8 text-gray-700 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2">
               1. Objet
             </h2>
             <p>
@@ -25,7 +25,7 @@ function Terms() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2">
               2. Accès à la plateforme
             </h2>
             <p>
@@ -38,7 +38,7 @@ function Terms() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2">
               3. Contenu de la plateforme
             </h2>
             <p>
@@ -53,7 +53,7 @@ function Terms() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2">
               4. Responsabilité
             </h2>
             <p>
@@ -67,7 +67,7 @@ function Terms() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2">
               5. Propriété intellectuelle
             </h2>
             <p>
@@ -78,7 +78,7 @@ function Terms() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2">
               6. Modification des CGU
             </h2>
             <p>
@@ -90,7 +90,7 @@ function Terms() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2">
               7. Contact
             </h2>
             <p>

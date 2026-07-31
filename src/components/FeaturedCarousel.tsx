@@ -26,7 +26,7 @@ function FeaturedCarousel({ restaurants }: FeaturedCarouselProps) {
   const current = featured[index];
 
   return (
-    <section className="px-6 pb-12">
+    <section className="px-4 sm:px-6 pb-10 sm:pb-12">
       <div className="max-w-2xl mx-auto">
         <p className="text-center text-gray-500 dark:text-gray-500 text-xs uppercase tracking-wide mb-3">
           À la une
@@ -34,7 +34,7 @@ function FeaturedCarousel({ restaurants }: FeaturedCarouselProps) {
 
         <div
           onClick={() => navigate(`/restaurant/${current.id}`)}
-          className="relative h-44 rounded-xl overflow-hidden cursor-pointer group shadow-lg shadow-black/30"
+          className="relative h-36 sm:h-44 rounded-xl overflow-hidden cursor-pointer group shadow-lg shadow-black/30"
         >
           <img
             src={current.logo}
@@ -42,8 +42,8 @@ function FeaturedCarousel({ restaurants }: FeaturedCarouselProps) {
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/15 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-4">
-            <h3 className="text-white text-base font-bold">{current.name}</h3>
+          <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
+            <h3 className="text-white text-sm sm:text-base font-bold">{current.name}</h3>
             <p className="text-gray-300 text-xs">{current.category}</p>
           </div>
         </div>

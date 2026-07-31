@@ -11,19 +11,19 @@ const benefits = [
 
 function WhyJoin() {
   return (
-    <section className="px-6 py-16 bg-gray-50 dark:bg-gray-950">
+    <section className="px-4 sm:px-6 py-12 sm:py-16 bg-gray-50 dark:bg-gray-950">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white text-center mb-4">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 dark:text-white text-center mb-4">
           Pourquoi rejoindre{' '}
           <span className="text-orange-500">éssika</span>{' '}
           <span className="text-gray-900 dark:text-white">eat</span> ?
         </h2>
-        <p className="text-gray-600 dark:text-gray-400 text-center mb-10">
+        <p className="text-gray-600 dark:text-gray-400 text-center text-sm sm:text-base mb-8 sm:mb-10">
           Une opportunité pour les restaurants de Brazzaville de se faire
           connaître.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
           {benefits.map((benefit) => (
             <div
               key={benefit}
@@ -35,8 +35,8 @@ function WhyJoin() {
           ))}
         </div>
 
-        <div className="text-center mt-10">
-          <Link to="/dashboard/login" className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full transition-colors">
+        <div className="text-center mt-8 sm:mt-10">
+          <Link to="/dashboard/login" className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 sm:px-8 py-3 rounded-full transition-colors text-sm sm:text-base">
             Devenir restaurant partenaire
           </Link>
         </div>

@@ -3,12 +3,12 @@ import logo from '../assets/logo.png';
 
 function Footer() {
   return (
-    <footer className="bg-gray-950 border-t border-gray-800 px-6 py-8 mt-16">
+    <footer className="bg-gray-950 border-t border-gray-800 px-4 sm:px-6 py-6 sm:py-8 mt-12 sm:mt-16">
       <div className="max-w-6xl mx-auto text-center text-gray-400 text-sm">
-        <img src={logo} alt="éssika eat" className="h-8 w-auto mx-auto mb-3" />
-        <p>Le guide numérique des restaurants de Brazzaville.</p>
+        <img src={logo} alt="éssika eat" className="h-7 sm:h-8 w-auto mx-auto mb-3" />
+        <p className="text-xs sm:text-sm">Le guide numérique des restaurants de Brazzaville.</p>
 
-        <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 mt-4 text-xs">
+        <div className="flex flex-wrap justify-center gap-x-3 sm:gap-x-4 gap-y-2 mt-4 text-xs">
           <Link to="/terms" className="hover:text-orange-400 transition-colors">
             Conditions d'utilisation
           </Link>
@@ -20,7 +20,7 @@ function Footer() {
           </Link>
         </div>
 
-        <p className="mt-4">
+        <p className="mt-4 text-xs sm:text-sm">
           © {new Date().getFullYear()} éssika eat — Tous droits réservés.
         </p>
       </div>

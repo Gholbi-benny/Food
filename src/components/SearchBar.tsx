@@ -23,7 +23,7 @@ function SearchBar({ value, onChange, restaurants }: SearchBarProps) {
     .slice(0, 6);
 
   return (
-    <div className="max-w-xl mx-auto mb-10 relative">
+    <div className="max-w-xl mx-auto mb-8 sm:mb-10 relative px-2 sm:px-0">
       <input
         type="text"
         value={value}
@@ -31,11 +31,11 @@ function SearchBar({ value, onChange, restaurants }: SearchBarProps) {
         onFocus={() => setIsOpen(true)}
         onBlur={() => setTimeout(() => setIsOpen(false), 150)}
         placeholder="Rechercher un restaurant, un quartier, une cuisine..."
-        className="w-full bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-500 rounded-full px-6 py-3 outline-none focus:ring-2 focus:ring-orange-500 transition-shadow"
+        className="w-full bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-500 rounded-full px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base outline-none focus:ring-2 focus:ring-orange-500 transition-shadow"
       />
 
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-xl overflow-hidden z-10">
+        <div className="absolute top-full left-2 right-2 sm:left-0 sm:right-0 mt-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-xl overflow-hidden z-10">
           <p className="text-xs text-gray-500 dark:text-gray-500 px-4 pt-3 pb-1">
             Restaurants recommandés
           </p>
