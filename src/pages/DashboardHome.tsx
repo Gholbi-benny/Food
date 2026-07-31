@@ -25,6 +25,8 @@ interface Dish {
   photo_url?: string | null;
 }
 
+type Period = '7d' | '30d' | '365d';
+
 function getInitials(name: string) {
   return name
     .split(' ')
@@ -52,10 +54,10 @@ function IconMenuBook() {
   );
 }
 
-function IconMessage() {
+function IconPhoneCall() {
   return (
     <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z" />
+      <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8 9.9a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.8 2Z" />
     </svg>
   );
 }
@@ -120,6 +122,12 @@ const tabs = [
   { id: 'stats', label: 'Statistiques' },
 ] as const;
 
+const periods: { id: Period; label: string; days: number }[] = [
+  { id: '7d', label: '7 jours', days: 7 },
+  { id: '30d', label: '30 jours', days: 30 },
+  { id: '365d', label: '1 an', days: 365 },
+];
+
 function DashboardHome() {
   const [activeTab, setActiveTab] = useState<'infos' | 'menu' | 'stats'>('infos');
   const [restaurant, setRestaurant] = useState<RestaurantData | null>(null);
@@ -139,6 +147,12 @@ function DashboardHome() {
   const [savingProfile, setSavingProfile] = useState(false);
   const [profileSaved, setProfileSaved] = useState(false);
   const [profileError, setProfileError] = useState('');
+
+  // Statistiques
+  const [selectedPeriod, setSelectedPeriod] = useState<Period>('7d');
+  const [statsLoading, setStatsLoading] = useState(false);
+  const [visitCount, setVisitCount] = useState(0);
+  const [callCount, setCallCount] = useState(0);
 
   const loadDishes = async (restaurantId: number) => {
     const { data: dishesData } = await supabase
@@ -185,6 +199,48 @@ function DashboardHome() {
 
     loadData();
   }, [navigate]);
+
+  useEffect(() => {
+    if (activeTab !== 'stats' || !restaurant) return;
+
+    const restaurantId = restaurant.id;
+    let cancelled = false;
+
+    async function fetchStats() {
+      setStatsLoading(true);
+
+      const days = periods.find((p) => p.id === selectedPeriod)?.days ?? 7;
+      const cutoff = new Date();
+      cutoff.setDate(cutoff.getDate() - days);
+      const cutoffIso = cutoff.toISOString();
+
+      const { count: visits } = await supabase
+        .from('restaurant_events')
+        .select('*', { count: 'exact', head: true })
+        .eq('restaurant_id', restaurantId)
+        .eq('event_type', 'visit')
+        .gte('created_at', cutoffIso);
+
+      const { count: calls } = await supabase
+        .from('restaurant_events')
+        .select('*', { count: 'exact', head: true })
+        .eq('restaurant_id', restaurantId)
+        .eq('event_type', 'call')
+        .gte('created_at', cutoffIso);
+
+      if (!cancelled) {
+        setVisitCount(visits ?? 0);
+        setCallCount(calls ?? 0);
+        setStatsLoading(false);
+      }
+    }
+
+    fetchStats();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [activeTab, selectedPeriod, restaurant]);
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
@@ -584,41 +640,53 @@ function DashboardHome() {
 
         {activeTab === 'stats' && (
           <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-800 p-5 sm:p-7">
-            <h2 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white mb-5 sm:mb-6 pb-4 border-b border-gray-100 dark:border-gray-800">
-              Ce mois-ci
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-0 pb-4 border-b border-gray-100 dark:border-gray-800 mb-5 sm:mb-6">
+              <h2 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white">
+                Statistiques
+              </h2>
+              <div className="inline-flex gap-1 bg-gray-100 dark:bg-gray-800 p-1 rounded-lg self-start sm:self-auto">
+                {periods.map((p) => (
+                  <button
+                    key={p.id}
+                    onClick={() => setSelectedPeriod(p.id)}
+                    className={`px-3 py-1.5 text-xs sm:text-sm font-semibold rounded-md transition-colors ${
+                      selectedPeriod === p.id
+                        ? 'bg-white dark:bg-gray-700 text-orange-500 shadow-sm'
+                        : 'text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'
+                    }`}
+                  >
+                    {p.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-5 border border-gray-100 dark:border-transparent">
                 <div className="w-9 h-9 rounded-lg bg-orange-500/10 text-orange-500 flex items-center justify-center mb-3">
                   <IconEye />
                 </div>
-                <p className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">0</p>
+                <p className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
+                  {statsLoading ? '...' : visitCount}
+                </p>
                 <p className="text-gray-500 dark:text-gray-400 text-xs sm:text-sm mt-1">
-                  Personnes ont découvert votre restaurant
+                  Personnes ont visité votre fiche restaurant
                 </p>
               </div>
               <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-5 border border-gray-100 dark:border-transparent">
                 <div className="w-9 h-9 rounded-lg bg-orange-500/10 text-orange-500 flex items-center justify-center mb-3">
-                  <IconMenuBook />
+                  <IconPhoneCall />
                 </div>
-                <p className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">0</p>
-                <p className="text-gray-500 dark:text-gray-400 text-xs sm:text-sm mt-1">
-                  Personnes ont consulté votre menu
+                <p className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
+                  {statsLoading ? '...' : callCount}
                 </p>
-              </div>
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-5 border border-gray-100 dark:border-transparent">
-                <div className="w-9 h-9 rounded-lg bg-orange-500/10 text-orange-500 flex items-center justify-center mb-3">
-                  <IconMessage />
-                </div>
-                <p className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">0</p>
                 <p className="text-gray-500 dark:text-gray-400 text-xs sm:text-sm mt-1">
-                  Personnes vous ont contacté
+                  Personnes vous ont appelé depuis le site
                 </p>
               </div>
             </div>
             <p className="text-gray-400 dark:text-gray-500 text-xs mt-5 text-center">
-              Les statistiques réelles seront disponibles une fois la
-              plateforme connectée à la base de données.
+              Chiffres calculés sur les {periods.find((p) => p.id === selectedPeriod)?.label.toLowerCase()} écoulés.
             </p>
           </div>
         )}
