@@ -14,4 +14,5 @@ export interface Restaurant {
   menu: Food[];
   verified?: boolean;
   plan?: 'free' | 'plus' | 'pro';
+  supabaseId?: number;
 }

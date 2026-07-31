@@ -19,6 +19,9 @@ function Navbar() {
           <Link to="/about" className="hover:text-orange-400 transition-colors">
             À propos
           </Link>
+          <Link to="/partners" className="hover:text-orange-400 transition-colors">
+            Rejoindre la plateforme
+          </Link>
           <ThemeToggle />
         </div>
       </div>
