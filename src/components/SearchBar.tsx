@@ -30,7 +30,7 @@ function SearchBar({ value, onChange, restaurants }: SearchBarProps) {
         onChange={(e) => onChange(e.target.value)}
         onFocus={() => setIsOpen(true)}
         onBlur={() => setTimeout(() => setIsOpen(false), 150)}
-        placeholder="Rechercher un restaurant, un quartier, une cuisine..."
+        placeholder="Restaurant, quartier, cuisine..."
         className="w-full bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-500 rounded-full px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base outline-none focus:ring-2 focus:ring-orange-500 transition-shadow"
       />
 
